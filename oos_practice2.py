@@ -20,15 +20,15 @@ class Employee:
            self.salary = salary
 
     def to_string(self):
-        return f"{self.name}\t{self.dept}\t\t{self.salary.get_total()}\t{self.salary.get_tax()}\t{self.salary.get_net()}"
+        return f"{self.name}\t{self.dept}\t{self.salary.get_total()}\t{self.salary.get_tax()}\t{self.salary.get_net()}"
 
 employees = [Employee("김민수", "개발팀", Salary(300, 50, 20)),
              Employee("이지은", "인사팀", Salary(320, 40, 30)),
              Employee("박준호", "영업팀", Salary(280, 60, 10)),
              Employee("최서연", "개발팀", Salary(350, 30, 25)),
-             Employee("한도윤", "마케팅팀", Salary(300, 70, 15)),]
+             Employee("한도윤", "마케팅", Salary(300, 70, 15)),]
 
-print("이름", "부서\t", "총액", "세금", "실수령액", sep="\t")
+print("이름", "부서", "총액", "세금", "실수령액", sep="\t")
 
 for emp in employees:
     print(emp.to_string())
